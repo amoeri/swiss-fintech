@@ -1,0 +1,55 @@
+\input{src/settings/settings}
+
+\begin{document}
+
+% Title Page
+\maketitle
+
+%**************************************************************************
+\frontmatter % preliminary parts
+%**************************************************************************
+
+\input{src/text/01_abstract.tex}
+\input{src/text/02_preface.tex}
+
+\tableofcontents
+\sloppy
+
+%**************************************************************************
+\mainmatter % The main part
+%**************************************************************************
+
+\input{src/text/03_introduction.tex}
+\input{src/text/04_method.tex}
+\input{src/text/05_results.tex}
+\input{src/text/06_discussion.tex}
+
+%**************************************************************************
+\backmatter % List of figures and tables, Glossary, Bibliography & Appendix
+%**************************************************************************
+
+% List of Figures
+\clearpage
+\addcontentsline{toc}{chapter}{Figures}
+\listoffigures
+
+% List of Tables
+\clearpage
+\addcontentsline{toc}{chapter}{Tables}
+\listoftables
+
+% Glossary (NOT WORKING with latexmk)
+%\clearpage
+%\input{src/bib/glossary.tex}
+
+
+% Bibliography
+\clearpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+
+% Appendix (include files however fit)
+%\addcontentsline{toc}{chapter}{Appendix}
+%\addcontentsline{toc}{subsection}{Listings}
+
+\end{document}
